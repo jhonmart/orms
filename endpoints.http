@@ -1,0 +1,47 @@
+@baseUrl = http://localhost:3000
+@userId = 1
+
+### Criar usuário
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "name": "Jonatas",
+  "email": "jonatas@email.com"
+}
+
+###
+
+### Listar usuários
+GET {{baseUrl}}/users
+
+###
+
+### Atualizar usuário (PUT)
+PUT {{baseUrl}}/users/{{userId}}
+Content-Type: application/json
+
+{
+  "name": "Jonatas Martins",
+  "email": "jonatas@email.com"
+}
+
+###
+
+### Buscar usuário por ID
+GET {{baseUrl}}/users/{{userId}}
+
+###
+
+### Atualização parcial (PATCH)
+PATCH {{baseUrl}}/users/{{userId}}
+Content-Type: application/json
+
+{
+  "name": "Jonatas Atualizado"
+}
+
+###
+
+### Remover usuário
+DELETE {{baseUrl}}/users/{{userId}}

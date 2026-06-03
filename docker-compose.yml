@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: orm-s
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+    command: npm run server
